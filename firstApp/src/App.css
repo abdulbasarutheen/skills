@@ -1,0 +1,261 @@
+
+body{
+  background-color: beige;
+}
+#div1{
+    margin-top: 60px;
+   width: 300px;
+   height:360px;
+   border:1px solid rgb(73, 197, 156);
+   padding:10px;
+   border-radius: 10px;
+   box-shadow: 3px 3px 5px rgba(0,0,0,0.5) ,-3px -3px 5px rgba(0,0,0,0.5);
+   animation: appear 5s linear;
+   animation-timeline: view();
+   animation-range: entry 0% cover 40%;
+   will-change:transform;
+
+   
+  }
+
+#div1 p:hover{
+  scale:1;
+}
+@keyframes appear{
+  from{
+    scale:0.5;
+    opacity:0.5;
+  }
+  to{
+    scale:1;
+    opacity:1;
+  }
+}
+
+  #main{
+    margin-top:80px;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color:black;
+    
+    gap:30px;
+    
+    
+  }
+  #title{
+  position:relative;
+  bottom:15px;
+  font-weight: bold;
+  font-family:Arial, Helvetica, sans-serif;
+  text-decoration: underline;
+  
+}
+#desc{
+  position:relative;
+  bottom:20px;
+  color: grey;
+}
+#img{
+  position:relative;
+  right:20px;
+}
+#price{
+  
+  position:relative;
+  bottom:150px;
+  left:180px;
+  line-height: 10px;
+}
+#menu{
+  position:fixed;
+  display:flex;
+  animation:down 1s linear;
+  overflow: hidden;
+  top:0;
+  width:100%;
+  height:80px;
+  z-index: 1000;
+  
+  background-color: rgb(73, 197, 156);
+}
+
+@keyframes down {
+  from{transform:translateY(-100%)}
+  to{transform:translateY(0%)}
+  
+}
+#brand{
+  padding-left:30px;
+  margin-top: 30px;
+  font-weight: bold;
+  font-size:20px;
+}
+#brand::first-letter{
+  color:rgb(225, 232, 12);
+  font-size:25px;
+}
+#logo{
+  padding-left:5px;
+  margin-top:35px;
+  height:30px;
+  width:30px;
+}
+
+
+#mode{
+  position: absolute;
+  right:0;
+  padding-right: 60px;
+  margin-top: 20px;
+}
+#mode input{
+  position: relative;
+  left:85px;
+  bottom:40px;
+  height:20px;
+  width: 20px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border:2px solid black;
+  border-radius: 50%;
+  cursor:pointer;
+  background-color: beige;
+
+}
+#mode input:checked{
+  background-color: rgb(0, 0, 0);
+  border:2px solid beige;
+}
+#supp{
+  display:flex;
+  gap:30px;
+  position: absolute;
+  right:0;
+  padding-right: 160px;
+  margin-top:20px;
+  
+}
+#supp p:hover{
+  text-decoration: underline;
+  scale:1.1;
+  color:rgb(225, 232, 12);
+}
+#filter{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position:absolute;
+  right:0;
+  padding-right: 400px;
+
+  gap:20px;
+  margin-top: 20px;
+}
+#filter select {
+  width: 200px;
+  height: 35px; 
+  border: none;
+  font-size: 16px;  
+  padding: 5px 10px;  
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  margin-top: 5px;
+  background-color: white; 
+  color: black; 
+}
+#filter select:hover,p:hover{
+  scale:1.1;
+}
+#filter p:hover{
+  color:rgb(225, 232, 12);
+
+}
+
+#blog {
+  animation:normal 3s ease;
+  height: 500px;
+  width: 60%;
+  margin: auto;
+  position: relative;
+  margin-top: 80px;
+  overflow: hidden; 
+  border-radius: 10px;
+  padding-top:100px;
+}
+
+#blog figure {
+  position: relative;
+  width: 500%;
+  display: flex;
+  margin: 0;
+  left: 0;
+  animation-delay: 3s; 
+}
+
+
+#blog figure img {
+  width: 20%;
+  flex-shrink: 0;
+  border-radius: 10px;
+  animation: slide 20s infinite ease-in-out;
+}
+
+
+@keyframes slide {
+  0%, 20% { transform: translateX(0%); }   
+  25%, 40% { transform: translateX(-100%); } 
+  45%, 60% { transform: translateX(-200%); }  
+  65%, 80% { transform: translateX(-300%); }  
+  85%, 95% { transform: translateX(-400%); }  
+  100% { transform: translateX(0%); } 
+}
+#view-more{
+  padding:10px 40px;
+  border:1px solid rgb(8, 76, 8);
+  margin-bottom: 20px;
+  background-color: rgb(16, 225, 201);
+  font-size: 15px;
+  font-weight: bold;
+  animation: appear 5s linear;
+   animation-timeline: view();
+   animation-range: entry 0% cover 10%;
+
+}
+#view-more:hover{
+  scale:1.1;
+  opacity: 0.8;
+  background-color: #1a1918;
+  color:rgb(16, 225, 201);
+}
+.dark #main {
+  background-color: #1a1918;
+  color: rgb(164, 164, 164);
+}
+
+.dark #menu {
+  background-color: rgb(4, 181, 122);
+}
+.dark {
+  background-color: #1a1918;
+}
+#now{
+    position: relative;
+    left:20px;
+    padding:6px 10px;
+    border-radius: 20px;
+    border:1px solid beige;
+    background-color: rgb(4, 181, 122);
+
+}
+#now:hover{
+  scale:1.1;
+  opacity: 0.7;
+  background-color: #1a1918;
+  color:rgb(4, 181, 122);
+
+}
+
+
+
